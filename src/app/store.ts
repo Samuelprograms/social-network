@@ -1,9 +1,13 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import userReducer from "../features/userSlice";
+import channelReducer from "../features/channelSlice";
+import performanceReducer from "../features/performanceSlice";
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    user: userReducer,
+    channel: channelReducer,
+    performance: performanceReducer,
   },
 });
 
